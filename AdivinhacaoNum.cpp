@@ -3,13 +3,13 @@
 #include <ctime>
 using namespace std;
 int main() {
-    std::srand(static_cast<unsigned int>(std::time(0)));
-    int numeroSecreto = std::rand() % 100 + 1; 
+    srand(static_cast<unsigned int>(time(0)));
+    int numeroSecreto = rand() % 100 + 1; 
     int palpite;
     int tentativas = 0;
 
-    cout << "=== Jogo de Adivinhação ===\n";
-   cout << "Tente adivinhar o número entre 1 e 100.\n";
+    cout << "=== Jogo de AdivinhaÃ§Ã£o ===\n";
+   cout << "Tente adivinhar o nÃºmero entre 1 e 100.\n";
 
     do {
         cout << "Digite seu palpite: ";
@@ -21,7 +21,7 @@ int main() {
         } else if (palpite > numeroSecreto) {
             cout << "Muito alto! Tente novamente.\n";
         } else {
-            cout << "Parabéns! Você adivinhou o número em " << tentativas << " tentativas.\n";
+            cout << "ParabÃ©ns! VocÃª adivinhou o nÃºmero em " << tentativas << " tentativas.\n";
         }
     } while (palpite != numeroSecreto);
 
